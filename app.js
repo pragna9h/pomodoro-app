@@ -1,4 +1,5 @@
 const bells = new Audio("./sounds/mixkit-achievement-bell-600.wav");
+const appMessage = document.querySelector(".app-message");
 const startBtn = document.querySelector(".btn-start");
 const pauseBtn = document.querySelector(".btn-pause");
 const resetBtn = document.querySelector(".btn-reset");
@@ -21,6 +22,7 @@ const appTimer = () => {
     totalSeconds = sessionAmount * 60;
     isRunning = true;
     isPaused = false;
+    appMessage.textContent = "running . . .";
     pauseBtn.textContent = "pause";
 
     myInterval = setInterval(updateSeconds, 1000);
@@ -55,10 +57,12 @@ const pauseTimer = () => {
         isPaused = true;
         clearInterval(myInterval);
         pauseBtn.textContent = "resume";
+        appMessage.textContent = "timer paused . ."
     } else {
         isPaused = false;
         myInterval = setInterval(updateSeconds, 1000);
         pauseBtn.textContent = "pause";
+        appMessage.textContent = "running . . .";
     }
 
 };
@@ -67,8 +71,8 @@ const resetTimer = () => {
     clearInterval(myInterval);
     isRunning = false;
     isPaused = false;
-    // totalSeconds = 25*60;
 
+    appMessage.textContent = "press start to begin"
     minuteDiv.textContent = `25`;
     secondDiv.textContent = `00`;
 };
