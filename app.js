@@ -62,7 +62,7 @@ const pauseTimer = () => {
         isPaused = false;
         myInterval = setInterval(updateSeconds, 1000);
         pauseBtn.textContent = "pause";
-        appMessage.textContent = "running . . .";
+        appMessage.textContent = "timer running . . .";
     }
 
 };
