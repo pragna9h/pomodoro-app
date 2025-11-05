@@ -4,13 +4,17 @@ html {
     letter-spacing: 0.8px;
     min-height: 100vh;
     color: #d8e9ef;
-    background-image: linear-gradient(-20deg, #239fac 0%, #cd4c40 100%);
+    /* background-image: linear-gradient(-20deg, #239fac 0%, #cd4c40 100%); */
+    background-image: url(./d0583b414f99249e7b4e74066f35af3f.gif);
     background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 h1 {
     margin: 0 auto 10px auto;
-    color: #d8e9ef;
+    color: #f3ce5e;
 }
 
 p {
@@ -72,7 +76,7 @@ p {
 }
 
 .circle {
-    border-color: #dc615a;
+    border-color: #dccd5a;
 }
 
 .circle-mask {
@@ -101,15 +105,16 @@ button {
     text-transform: uppercase;
     letter-spacing: 1px;
     border: none;
-    background: black;
-    /* outline: 1px solid #d8e9ef; */
-    padding: 0.3rem 1rem;
+    background: none;
+    background: #692d69;
+    padding: 0.3rem 0.5rem;
     border-radius: 5%;
-    color: #dc615a;
+    color: #FAFAFA;
 }
 
 button:hover {
-    color: #dc615a;
-    border: 1.5px solid #FAFAFA;
+    color: #FAFAFA;
+    border: 2px solid #FAFAFA;
+    background-color: #692d69;
     cursor: pointer;
 }

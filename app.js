@@ -22,7 +22,7 @@ const appTimer = () => {
     totalSeconds = sessionAmount * 60;
     isRunning = true;
     isPaused = false;
-    appMessage.textContent = "running . . .";
+    appMessage.textContent = "timer running . . .";
     pauseBtn.textContent = "pause";
 
     myInterval = setInterval(updateSeconds, 1000);
