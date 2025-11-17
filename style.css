@@ -51,7 +51,7 @@ p {
     width: 100px;
     height: 200px;
     box-sizing: border-box;
-    border: solid 6px;
+    border: solid 8px;
 }
 
 .left-side {
@@ -85,10 +85,13 @@ p {
 
 .app-counter-box {
     font-family: "Droid Sans Mono", monospace;
-    font-size: 250%;
+    font-size: 270%;
+    font-weight: bolder;
     position: relative;
     top: 70px;
     color: #d8e9ef;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 0.1rem;
 }
 
 .btn-container {
@@ -117,4 +120,10 @@ button:hover {
     border: 2px solid #FAFAFA;
     background-color: #692d69;
     cursor: pointer;
+}
+
+.btn-music {
+    min-width: 125px;
+    text-align: center;
+    /* white-space: nowrap; */
 }
