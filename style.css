@@ -132,7 +132,7 @@ button:hover {
     display: flex;
     justify-content: center;
     gap: 50px;
-    margin-top: 80px;
+    margin-top: 150px;
 }
 
 .adjust-box {
@@ -163,3 +163,4 @@ button:hover {
     background-color: #824182;
     cursor: pointer;
 }
+
