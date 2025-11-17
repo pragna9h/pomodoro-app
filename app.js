@@ -118,7 +118,7 @@ const toggleMusic = () => {
 const increaseMinutes = () => {
     if (isRunning) return;
     let m = Number(minuteDiv.textContent);
-    if (m <= 99) m++;
+    if (m < 99) m++;
     minuteDiv.textContent = m;
 };
 
@@ -165,4 +165,5 @@ musicBtn.addEventListener("click", () => {
 minuteUp.addEventListener("click", increaseMinutes);
 minuteDown.addEventListener("click", decreaseMinutes);
 secondUp.addEventListener("click", increaseSeconds);
+
 secondDown.addEventListener("click", decreaseSeconds);
