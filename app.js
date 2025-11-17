@@ -8,6 +8,11 @@ const pauseBtn = document.querySelector(".btn-pause");
 const resetBtn = document.querySelector(".btn-reset");
 const musicBtn = document.querySelector(".btn-music");
 
+const minuteUp = document.querySelector(".minute-up");
+const minuteDown = document.querySelector(".minute-down");
+const secondUp = document.querySelector(".second-up");
+const secondDown = document.querySelector(".second-down");
+
 const minuteDiv = document.querySelector(".minutes");
 const secondDiv = document.querySelector(".seconds");
 
@@ -110,10 +115,54 @@ const toggleMusic = () => {
     }
 }
 
+const increaseMinutes = () => {
+    if (isRunning) return;
+    let m = Number(minuteDiv.textContent);
+    if (m <= 99) m++;
+    minuteDiv.textContent = m;
+};
+
+const decreaseMinutes = () => {
+    if (isRunning) return;
+    let m = Number(minuteDiv.textContent);
+    if (m > 0) m--;
+    minuteDiv.textContent = m;
+};
+
+const increaseSeconds = () => {
+    if (isRunning) return;
+    let s = Number(secondDiv.textContent);
+
+    s += 10;
+    if (s >= 60) {
+        s = 0;
+    }
+
+    secondDiv.textContent =  s < 10 ? "0" + s : s;
+};
+
+const decreaseSeconds = () => {
+    if (isRunning) return;
+    let s = Number(secondDiv.textContent);
+
+    s -= 10;
+    if (s < 0) {
+        s = 50;
+    }
+
+    secondDiv.textContent = s < 10 ? "0" + s : s;
+};
+
+
 startBtn.addEventListener("click", appTimer);
 pauseBtn.addEventListener("click", pauseTimer);
 resetBtn.addEventListener("click", resetTimer);
 musicBtn.addEventListener("click", () => {
     isMusicOn = !isMusicOn;
     toggleMusic();
-})
+});
+
+minuteUp.addEventListener("click", increaseMinutes);
+minuteDown.addEventListener("click", decreaseMinutes);
+secondUp.addEventListener("click", increaseSeconds);
+secondDown.addEventListener("click", decreaseSeconds);
